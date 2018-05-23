@@ -2,7 +2,7 @@ describe('go home', function () {
 
     it('loads homepage', function () {
 
-        cy.visit('https://jeromebouvier.fr/')
+        cy.visit('/')
         cy.get('.main-logo').should('be.visible')
         cy.get('.search-icon').should('be.visible')
         cy.get('.menu-bar').should('be.visible').click()
