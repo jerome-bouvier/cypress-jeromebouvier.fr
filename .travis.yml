@@ -1,4 +1,13 @@
 language: node_js
 node_js:
-  - "iojs"
-  - "7"
+ - 10
+cache:
+  directories:
+    - ~/.npm
+    - ~/.cache
+install:
+  - npm ci
+before_script:
+  - npm start -- --silent &
+script:
+  - $(npm bin)/cypress run --record
